@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Мастер Сергей — ремонт стиральных машин в Казани</title>
+<meta name="description" content="Частный мастер по ремонту стиральных машин в Казани. Выезд в день обращения, честная диагностика, гарантия до 1 года. Звоните или оставьте заявку.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A7%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f7f9fc;
+    --surface: #ffffff;
+    --text: #16202c;
+    --muted: #5b6b7f;
+    --line: #e3e9f1;
+    --brand: #1668e3;
+    --brand-dark: #0f4fae;
+    --brand-soft: #eaf2fe;
+    --accent: #0bb37a;
+    --accent-soft: #e6f8f1;
+    --radius: 18px;
+    --shadow-sm: 0 1px 2px rgba(16, 32, 56, .06), 0 4px 14px rgba(16, 32, 56, .06);
+    --shadow-md: 0 10px 30px rgba(16, 32, 56, .10);
+    --max: 1140px;
+    --font: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    font-family: var(--font);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, svg { display: block; max-width: 100%; }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  h1, h2, h3 { line-height: 1.2; letter-spacing: -.02em; margin: 0 0 .5em; }
+  h1 { font-size: clamp(1.85rem, 1.2rem + 2.6vw, 3.1rem); }
+  h2 { font-size: clamp(1.45rem, 1.1rem + 1.3vw, 2.15rem); }
+  h3 { font-size: 1.12rem; }
+  p { margin: 0 0 1em; }
+
+  .container {
+    width: 100%;
+    max-width: var(--max);
+    margin-inline: auto;
+    padding-inline: clamp(16px, 4vw, 32px);
+  }
+
+  .section { padding-block: clamp(48px, 7vw, 88px); scroll-margin-top: 76px; }
+  .section--alt { background: var(--surface); border-block: 1px solid var(--line); }
+
+  .section-head { max-width: 640px; margin-bottom: clamp(24px, 4vw, 40px); }
+  .section-head p { color: var(--muted); margin: 0; }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--brand);
+    background: var(--brand-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color .18s ease, color .18s ease, box-shadow .18s ease, transform .18s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+  .btn:focus-visible { outline: 3px solid rgba(22, 104, 227, .35); outline-offset: 2px; }
+
+  .btn--primary { background: var(--brand); color: #fff; box-shadow: 0 6px 16px rgba(22, 104, 227, .28); }
+  .btn--primary:hover { background: var(--brand-dark); }
+
+  .btn--ghost { background: var(--surface); color: var(--text); border-color: var(--line); box-shadow: var(--shadow-sm); }
+  .btn--ghost:hover { border-color: #c9d5e4; }
+
+  .btn--block { width: 100%; }
+
+  /* ---------- Header ---------- */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, .88);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 68px;
+    padding-block: 10px;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; color: var(--text); }
+  .logo:hover { text-decoration: none; }
+  .logo__mark {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--brand);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 12px rgba(22, 104, 227, .3);
+  }
+  .logo__name { display: block; font-weight: 700; font-size: 1.02rem; line-height: 1.25; }
+  .logo__city {
+    display: flex; align-items: center; gap: 5px;
+    font-size: .84rem; color: var(--muted); line-height: 1.3;
+  }
+  .header .btn { flex: none; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding-block: clamp(36px, 6vw, 76px); position: relative; overflow: hidden; }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: -30% -10% auto auto;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle at center, rgba(22, 104, 227, .13), transparent 65%);
+    pointer-events: none;
+  }
+  .hero__grid {
+    position: relative;
+    display: grid;
+    gap: clamp(28px, 5vw, 56px);
+    align-items: center;
+  }
+  .hero__lead { font-size: clamp(1.02rem, .95rem + .4vw, 1.18rem); color: var(--muted); max-width: 54ch; margin-top: .4em; }
+  .hero__title-accent { color: var(--brand); }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .hero__note { margin: 18px 0 0; font-size: .9rem; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+
+  .benefits {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+    margin: 30px 0 0;
+    padding: 0;
+  }
+  .benefit {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow-sm);
+  }
+  .benefit__icon {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .benefit__title { font-weight: 700; margin: 0; line-height: 1.3; }
+  .benefit__text { margin: 2px 0 0; font-size: .92rem; color: var(--muted); line-height: 1.45; }
+
+  /* Hero card */
+  .hero-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: var(--shadow-md);
+    padding: clamp(22px, 3vw, 32px);
+  }
+  .hero-card__title { margin-bottom: 4px; font-size: 1.2rem; }
+  .hero-card__sub { margin: 0 0 18px; font-size: .9rem; color: var(--muted); }
+  .quick-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .quick-list li { display: flex; gap: 12px; align-items: flex-start; }
+  .quick-list__num {
+    flex: none;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-weight: 700;
+    font-size: .85rem;
+  }
+  .quick-list__title { font-weight: 600; line-height: 1.35; margin: 0; }
+  .quick-list__text { font-size: .88rem; color: var(--muted); margin: 0; line-height: 1.45; }
+
+  .hero-card__footer {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .hero-card__footer span { font-size: .88rem; color: var(--muted); }
+
+  /* ---------- Problems ---------- */
+  .cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .section--alt .card { background: var(--bg); }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #cfdcec; }
+  .card__head { display: flex; align-items: center; gap: 12px; }
+  .card__icon {
+    flex: none;
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    display: grid; place-items: center;
+    background: var(--brand-soft);
+    color: var(--brand);
+  }
+  .card h3 { margin: 0; font-size: 1.05rem; }
+  .card p { margin: 0; font-size: .92rem; color: var(--muted); line-height: 1.5; flex: 1; }
+  .price {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    align-self: flex-start;
+    margin-top: 4px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: #067a53;
+    font-weight: 700;
+    font-size: .95rem;
+  }
+  .price small { font-weight: 600; font-size: .76rem; color: #3f8f72; }
+  .cards-note { margin: 20px 0 0; font-size: .88rem; color: var(--muted); }
+
+  /* ---------- Steps ---------- */
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    counter-reset: step;
+  }
+  .step {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px 22px 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .step__num {
+    display: grid;
+    place-items: center;
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    background: var(--brand);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 12px rgba(22, 104, 227, .25);
+  }
+  .step h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .step p { margin: 0; font-size: .92rem; color: var(--muted); line-height: 1.5; }
+
+  /* ---------- Form ---------- */
+  .form-wrap {
+    display: grid;
+    gap: clamp(24px, 4vw, 48px);
+    align-items: start;
+  }
+  .form-side .list-check { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
+  .form-side .list-check li { display: flex; gap: 10px; align-items: flex-start; color: var(--muted); font-size: .95rem; }
+  .form-side .list-check svg { flex: none; color: var(--accent); margin-top: 2px; }
+
+  .form-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: var(--shadow-md);
+    padding: clamp(22px, 3.5vw, 34px);
+    position: relative;
+  }
+
+  .field { margin-bottom: 16px; }
+  .field label { display: block; font-weight: 600; font-size: .92rem; margin-bottom: 6px; }
+  .field label .req { color: #d64545; }
+  .field label .optional { font-weight: 400; font-size: .84rem; color: var(--muted); }
+  .field input,
+  .field textarea {
+    width: 100%;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--text);
+    background: #fbfcfe;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 13px 14px;
+    transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+  }
+  .field textarea { resize: vertical; min-height: 110px; }
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    background: #fff;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 4px rgba(22, 104, 227, .14);
+  }
+  .field input[aria-invalid="true"],
+  .field textarea[aria-invalid="true"] { border-color: #d64545; box-shadow: 0 0 0 4px rgba(214, 69, 69, .12); }
+  .error {
+    display: none;
+    margin: 6px 0 0;
+    font-size: .84rem;
+    color: #c23a3a;
+  }
+  .error.is-visible { display: block; }
+
+  .consent { display: flex; gap: 10px; align-items: flex-start; font-size: .84rem; color: var(--muted); margin: 4px 0 18px; }
+  .consent input { margin-top: 3px; width: 16px; height: 16px; flex: none; accent-color: var(--brand); }
+
+  .form-msg { margin: 14px 0 0; min-height: 1.2em; font-size: .9rem; }
+  .form-msg.error-text { color: #c23a3a; }
+
+  /* Success state */
+  .success {
+    position: relative;
+    text-align: center;
+    padding: clamp(18px, 4vw, 30px) 6px;
+    animation: pop .35s ease both;
+  }
+  .success[hidden] { display: none; }
+  .success__badge {
+    width: 84px; height: 84px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--accent-soft);
+    color: var(--accent);
+    box-shadow: 0 0 0 10px rgba(11, 179, 122, .08);
+    animation: pop .45s cubic-bezier(.2, .9, .3, 1.3) both;
+  }
+  .success h3 { font-size: 1.4rem; margin-bottom: 8px; }
+  .success p { color: var(--muted); max-width: 40ch; margin-inline: auto; }
+  .success__summary {
+    text-align: left;
+    margin: 22px auto;
+    max-width: 380px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: .92rem;
+  }
+  .success__summary div { display: flex; justify-content: space-between; gap: 14px; padding-block: 4px; }
+  .success__summary dt { color: var(--muted); flex: none; }
+  .success__summary dd { margin: 0; font-weight: 600; text-align: right; overflow-wrap: anywhere; }
+  .success .btn--ghost { margin-top: 4px; }
+
+  @keyframes pop {
+    from { opacity: 0; transform: scale(.94) translateY(6px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* Error state */
+  .error-box {
+    margin-top: 18px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: #fff7f6;
+    border: 1px solid #f3cfcb;
+    border-radius: 16px;
+    text-align: left;
+    animation: pop .3s ease both;
+  }
+  .error-box[hidden] { display: none; }
+  .error-box__badge {
+    flex: none;
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: #fde7e4;
+    color: #c23a3a;
+  }
+  .error-box h3 { font-size: 1.1rem; margin: 4px 0 6px; }
+  .error-box p { color: #7b4a46; font-size: .92rem; margin: 0 0 12px; }
+  .error-box__actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .error-box__actions .btn { padding: 10px 16px; font-size: .92rem; }
+
+  .form-card.is-error { border-color: #f0c4bf; box-shadow: 0 0 0 4px rgba(214, 69, 69, .06), var(--shadow-md); }
+
+  .spinner {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.45);
+    border-top-color: #fff;
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .btn[disabled] { cursor: progress; opacity: .85; transform: none; }
+
+  /* ---------- Footer ---------- */
+  .footer { background: #101a26; color: #c8d3e0; padding-block: clamp(36px, 5vw, 56px) 24px; }
+  .footer a { color: #fff; }
+  .footer a:hover { color: #8db9f6; }
+  .footer__grid { display: grid; gap: 32px; }
+  .footer h4 { color: #fff; font-size: 1rem; margin: 0 0 12px; }
+  .footer .logo__name { color: #fff; }
+  .footer .logo__city { color: #8ea0b5; }
+  .footer__about { color: #93a4b8; font-size: .92rem; max-width: 36ch; margin-top: 14px; }
+  .contacts { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; font-size: .95rem; }
+  .contacts li { display: flex; gap: 10px; align-items: flex-start; }
+  .contacts svg { flex: none; margin-top: 3px; color: #6f89a6; }
+  .stub { color: #fff; font-weight: 600; }
+  .stub__hint { display: block; font-size: .78rem; color: #7d8ea3; font-weight: 400; }
+  .footer__bottom {
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    justify-content: space-between;
+    font-size: .82rem;
+    color: #7d8ea3;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (min-width: 760px) {
+    .benefits { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .hero__grid { grid-template-columns: 1.15fr .85fr; }
+    .benefits { grid-template-columns: 1fr; }
+    .form-wrap { grid-template-columns: .9fr 1.1fr; }
+    .footer__grid { grid-template-columns: 1.4fr 1fr; }
+  }
+  @media (max-width: 599px) {
+    body { font-size: 16px; }
+    .header .btn--cta { padding: 10px 14px; font-size: .88rem; }
+    .logo__name { font-size: .95rem; }
+    .hero__actions .btn { width: 100%; }
+    .card { padding: 18px; }
+  }
+  @media (max-width: 420px) {
+    .logo__city { font-size: .78rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="#top" aria-label="Мастер Сергей — на главную">
+      <span class="logo__mark" aria-hidden="true">МС</span>
+      <span>
+        <span class="logo__name">Мастер Сергей</span>
+        <span class="logo__city">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Казань, выезд по городу
+        </span>
+      </span>
+    </a>
+    <a class="btn btn--primary btn--cta" href="#zayavka">Оставить заявку</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="section hero" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div>
+        <span class="eyebrow">Частный мастер · ремонт стиральных машин</span>
+        <h1 id="hero-title">Починю вашу стиральную машинку <span class="hero__title-accent">в день обращения</span></h1>
+        <p class="hero__lead">
+          Ремонт на дому в Казани: приезжаю сам, не передаю заказ «фирмам». Работаю с любыми брендами —
+          от Bosch до Indesit. Скажу сразу, что сломалось и сколько будет стоить.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#zayavka">Оставить заявку</a>
+          <a class="btn btn--ghost" href="#polomki">Цены на ремонт</a>
+        </div>
+        <p class="hero__note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Сегодня на связи до 22:00 · без выходных
+        </p>
+
+        <ul class="benefits">
+          <li class="benefit">
+            <span class="benefit__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg>
+            </span>
+            <div>
+              <p class="benefit__title">Выезд в день обращения</p>
+              <p class="benefit__text">Позвоните до 18:00 — приеду сегодня из свободного окна.</p>
+            </div>
+          </li>
+          <li class="benefit">
+            <span class="benefit__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+            </span>
+            <div>
+              <p class="benefit__title">Честная диагностика</p>
+              <p class="benefit__text">Цену называю до начала работ. Не выгодно чинить — скажу прямо.</p>
+            </div>
+          </li>
+          <li class="benefit">
+            <span class="benefit__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.2 8 9 4.6-.8 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <div>
+              <p class="benefit__title">Гарантия до 1 года</p>
+              <p class="benefit__text">Письменная гарантия на работу и установленные запчасти.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <aside class="hero-card" aria-label="Кратко о мастере">
+        <h2 class="hero-card__title">Почему меня выбирают</h2>
+        <p class="hero-card__sub">Частный мастер Сергей · опыт более 12 лет</p>
+        <ul class="quick-list">
+          <li>
+            <span class="quick-list__num">1</span>
+            <div>
+              <p class="quick-list__title">Запчасти в наличии</p>
+              <p class="quick-list__text">Ходовые помпы, подшипники и ремни вожу с собой — ремонт без ожидания доставки.</p>
+            </div>
+          </li>
+          <li>
+            <span class="quick-list__num">2</span>
+            <div>
+              <p class="quick-list__title">Работаю аккуратно</p>
+              <p class="quick-list__text">Бахилы и покрывало приношу сам, после ремонта убираю за собой.</p>
+            </div>
+          </li>
+          <li>
+            <span class="quick-list__num">3</span>
+            <div>
+              <p class="quick-list__title">Оплата после проверки</p>
+              <p class="quick-list__text">Сначала тестовая стирка, потом оплата. Наличными или переводом.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="hero-card__footer">
+          <span>Вопросы по ремонту?</span>
+          <a class="btn btn--ghost" href="#zayavka">Заказать звонок</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= PROBLEMS ================= -->
+  <section class="section section--alt" id="polomki" aria-labelledby="polomki-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Частые поломки</span>
+        <h2 id="polomki-title">Что обычно ломается и сколько стоит</h2>
+        <p>Цены указаны «от» и включают работу. Точную стоимость назову после диагностики — она фиксируется до начала ремонта.</p>
+      </div>
+
+      <ul class="cards">
+        <li class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11Z"/></svg>
+            </span>
+            <h3>Машина не сливает воду</h3>
+          </div>
+          <p>Забился фильтр, вышел из строя сливной насос или датчик уровня воды.</p>
+          <span class="price">от 900 ₽ <small>работа</small></span>
+        </li>
+
+        <li class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h13v10H4z"/><path d="M17 9h2.5a2 2 0 0 1 0 6H17"/><path d="M8 3v2M12 3v2"/></svg>
+            </span>
+            <h3>Не набирает воду</h3>
+          </div>
+          <p>Неисправен впускной клапан, засорён фильтр-сетка или сломан прессостат.</p>
+          <span class="price">от 1 000 ₽ <small>работа</small></span>
+        </li>
+
+        <li class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/></svg>
+            </span>
+            <h3>Барабан не вращается</h3>
+          </div>
+          <p>Растянулся или порвался ремень, износились щётки двигателя, сгорел привод.</p>
+          <span class="price">от 1 200 ₽ <small>работа</small></span>
+        </li>
+
+        <li class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9h.01M15 9h.01"/><circle cx="12" cy="12" r="9"/><path d="M8.5 15.5a4.5 4.5 0 0 0 7 0"/></svg>
+            </span>
+            <h3>Шумит и гудит</h3>
+          </div>
+          <p>Разбились подшипники барабана, износилась крестовина или уплотнитель.</p>
+          <span class="price">от 2 500 ₽ <small>работа</small></span>
+        </li>
+
+        <li class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 3h4M9 8h6M9 12h6M9 16h6"/></svg>
+            </span>
+            <h3>Показывает код ошибки</h3>
+          </div>
+          <p>Нужна расшифровка кода и точная диагностика модуля управления.</p>
+          <span class="price">от 700 ₽ <small>диагностика</small></span>
+        </li>
+
+        <li class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-6"/><rect x="7" y="8" width="10" height="8" rx="2"/><path d="M3 12h4M17 12h4"/></svg>
+            </span>
+            <h3>Не отжимает бельё</h3>
+          </div>
+          <p>У каждого «не отжимает» своя причина: от засора до неисправности насоса.</p>
+          <span class="price">от 1 000 ₽ <small>работа</small></span>
+        </li>
+
+        <li class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
+            </span>
+            <h3>Не включается</h3>
+          </div>
+          <p>Проверю модуль управления, проводку и поменяю сетевой фильтр.</p>
+          <span class="price">от 1 500 ₽ <small>работа</small></span>
+        </li>
+
+        <li class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+            </span>
+            <h3>Подтекает вода</h3>
+          </div>
+          <p>Замена уплотнителя люка, манжет и хомутов, проверка шлангов.</p>
+          <span class="price">от 1 300 ₽ <small>работа</small></span>
+        </li>
+
+        <li class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v6H4z"/><path d="M6 10v10h12V10"/><path d="M10 15h4"/></svg>
+            </span>
+            <h3>Профилактика и уход</h3>
+          </div>
+          <p>Чистка фильтров и манжеты от накипи, кошачьей шерсти и запаха.</p>
+          <span class="price">от 800 ₽ <small>работа</small></span>
+        </li>
+      </ul>
+
+      <p class="cards-note">Стоимость запчастей оплачивается отдельно по чеку либо включается в смету до начала работ.</p>
+    </div>
+  </section>
+
+  <!-- ================= STEPS ================= -->
+  <section class="section" id="rabota" aria-labelledby="rabota-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Как мы работаем</span>
+        <h2 id="rabota-title">Четыре простых шага</h2>
+        <p>От заявки до работающей машины — обычно в течение одного дня.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <div class="step__num" aria-hidden="true">1</div>
+          <h3>Оставляете заявку</h3>
+          <p>Через форму или по телефону. Уточню модель машины и что именно происходит.</p>
+        </li>
+        <li class="step">
+          <div class="step__num" aria-hidden="true">2</div>
+          <h3>Согласуем время</h3>
+          <p>Подберём удобный слот. Постараюсь приехать сегодня, если заявка до 18:00.</p>
+        </li>
+        <li class="step">
+          <div class="step__num" aria-hidden="true">3</div>
+          <h3>Диагностика и цена</h3>
+          <p>Нахожу причину и называю фиксированную стоимость работ до их начала.</p>
+        </li>
+        <li class="step">
+          <div class="step__num" aria-hidden="true">4</div>
+          <h3>Ремонт и проверка</h3>
+          <p>Чиню на месте, делаем тестовую стирку, выдаю гарантию на работу.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= FORM ================= -->
+  <section class="section section--alt" id="zayavka" aria-labelledby="zayavka-title">
+    <div class="container form-wrap">
+      <div class="form-side">
+        <span class="eyebrow">Заявка</span>
+        <h2 id="zayavka-title">Оставьте заявку — перезвоню</h2>
+        <p style="color: var(--muted)">Расскажите, что случилось с машинкой. Свяжусь в течение 15 минут в рабочее время и предложу варианты ремонта.</p>
+        <ul class="list-check">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+            Выезд в день обращения — по договорённости
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+            Цена известна до начала ремонта
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+            Гарантия до 1 года — письменно
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+            Не болтаю по телефону часами — только по делу
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <form id="request-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <!-- Ключ Web3Forms: заявки приходят на почту, привязанную к этому ключу -->
+          <input type="hidden" name="access_key" value="f66b91fa-8e92-4cfb-bef7-d288aa88db65">
+          <input type="hidden" name="subject" value="Новая заявка с сайта «Мастер Сергей»">
+          <input type="hidden" name="from_name" value="Сайт Мастер Сергей">
+          <input type="hidden" name="page_url" value="">
+
+          <div class="field">
+            <label for="name">Ваше имя <span class="req" aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Например, Анна" required aria-describedby="name-error" autofocus>
+            <p class="error" id="name-error">Укажите имя — как к вам обращаться.</p>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="email-error">
+            <p class="error" id="email-error">Введите e-mail, например ivan@mail.ru.</p>
+          </div>
+
+          <div class="field">
+            <label for="phone">Телефон <span class="optional">(необязательно)</span></label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" maxlength="18" aria-describedby="phone-error">
+            <p class="error" id="phone-error">Номер похож на неполный — проверьте, пожалуйста.</p>
+          </div>
+
+          <div class="field">
+            <label for="message">Что случилось? <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" placeholder="Модель машинки и в чём проблема: не сливает воду, шумит при отжиме, код ошибки…" required aria-describedby="message-error"></textarea>
+            <p class="error" id="message-error">Опишите проблему хотя бы несколькими словами.</p>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="consent" name="consent" value="Да, согласен" required aria-describedby="consent-error">
+            <span>Согласен на обработку персональных данных для обратного звонка.</span>
+          </label>
+          <p class="error" id="consent-error" style="margin: -10px 0 12px">Нужно согласие на обработку данных.</p>
+
+          <button class="btn btn--primary btn--block" type="submit" id="submit-btn">Отправить заявку</button>
+          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="success" id="success" hidden role="status" aria-live="polite">
+          <div class="success__badge" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>
+          </div>
+          <h3>Заявка отправлена!</h3>
+          <p id="success-text">Спасибо! Сергей скоро вам позвонит — обычно в течение 15 минут.</p>
+          <dl class="success__summary" id="success-summary"></dl>
+          <button class="btn btn--ghost" type="button" id="new-request">Оставить ещё одну заявку</button>
+        </div>
+
+        <div class="error-box" id="error-box" hidden role="alert">
+          <div class="error-box__badge" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5"/><path d="M12 16.5h.01"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <div>
+            <h3>Не удалось отправить</h3>
+            <p id="error-text">Проверьте интернет и попробуйте ещё раз.</p>
+            <div class="error-box__actions">
+              <button class="btn btn--primary" type="button" id="retry-btn">Попробовать снова</button>
+              <a class="btn btn--ghost" href="mailto:master.sergey@example.com">Написать на почту</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="logo">
+          <span class="logo__mark" aria-hidden="true">МС</span>
+          <span>
+            <span class="logo__name">Мастер Сергей</span>
+            <span class="logo__city">Ремонт стиральных машин · Казань</span>
+          </span>
+        </div>
+        <p class="footer__about">Частный мастер. Работаю на дому у клиента, без посредников и навязчивых звонков. Всегда даю гарантию.</p>
+      </div>
+
+      <div>
+        <h4>Контакты</h4>
+        <ul class="contacts">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <span><span class="stub">+7 (900) 000-00-00</span><span class="stub__hint">заглушка — замените на свой номер</span></span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+            <a href="#" onclick="return false"><span class="stub">@master_sergey_kzn</span><span class="stub__hint">заглушка — Telegram</span></a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Казань и ближайшие пригороды</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span>Ежедневно с 8:00 до 22:00</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Мастер Сергей. Ремонт стиральных машин в Казани.</span>
+      <span>Демонстрационная страница-визитка. Телефон и Telegram — заглушки.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var form = document.getElementById("request-form");
+  var success = document.getElementById("success");
+  var summary = document.getElementById("success-summary");
+  var msg = document.getElementById("form-msg");
+  var submitBtn = document.getElementById("submit-btn");
+  var resetBtn = document.getElementById("new-request");
+  var errorBox = document.getElementById("error-box");
+  var errorText = document.getElementById("error-text");
+  var retryBtn = document.getElementById("retry-btn");
+  var formCard = document.querySelector(".form-card");
+  var yearEl = document.getElementById("year");
+  var pageUrlField = form.querySelector('input[name="page_url"]');
+
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (pageUrlField) pageUrlField.value = location.href;
+
+  var fields = {
+    name: document.getElementById("name"),
+    email: document.getElementById("email"),
+    phone: document.getElementById("phone"),
+    message: document.getElementById("message"),
+    consent: document.getElementById("consent")
+  };
+
+  var errors = {
+    name: document.getElementById("name-error"),
+    email: document.getElementById("email-error"),
+    phone: document.getElementById("phone-error"),
+    message: document.getElementById("message-error"),
+    consent: document.getElementById("consent-error")
+  };
+
+  // Плавный скролл с учётом фиксированной шапки (в т.ч. без поддержки smooth-scroll)
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      var id = link.getAttribute("href");
+      if (!id || id === "#") return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var header = document.querySelector(".header");
+      var offset = header ? header.offsetHeight + 10 : 0;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: "smooth" });
+      if (history.replaceState) history.replaceState(null, "", id);
+    });
+  });
+
+  function setError(key, visible) {
+    var input = fields[key];
+    var err = errors[key];
+    if (input) input.setAttribute("aria-invalid", visible ? "true" : "false");
+    if (err) err.classList.toggle("is-visible", visible);
+  }
+
+  // Маска телефона: +7 (999) 123-45-67
+  function formatPhone(raw) {
+    var digits = raw.replace(/\D/g, "");
+    if (digits[0] === "8") digits = "7" + digits.slice(1);
+    if (digits && digits[0] !== "7") digits = "7" + digits;
+    digits = digits.slice(0, 11);
+    if (!digits) return "";
+    var out = "+7";
+    if (digits.length > 1) out += " (" + digits.slice(1, 4);
+    if (digits.length >= 5) out += ") " + digits.slice(4, 7);
+    if (digits.length >= 8) out += "-" + digits.slice(7, 9);
+    if (digits.length >= 10) out += "-" + digits.slice(9, 11);
+    return out;
+  }
+
+  fields.phone.addEventListener("input", function () {
+    var caretAtEnd = this.selectionStart === this.value.length;
+    this.value = formatPhone(this.value);
+    if (caretAtEnd) this.setSelectionRange(this.value.length, this.value.length);
+    setError("phone", false);
+  });
+
+  ["name", "email", "message", "consent"].forEach(function (key) {
+    var el = fields[key];
+    el.addEventListener("input", function () { setError(key, false); });
+    el.addEventListener("change", function () { setError(key, false); });
+  });
+
+  function isEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[a-zA-Zа-яА-ЯёЁ]{2,}$/.test(value);
+  }
+
+  function validate() {
+    var ok = true;
+
+    if (fields.name.value.trim().length < 2) {
+      setError("name", true); ok = false;
+    }
+    if (!isEmail(fields.email.value.trim())) {
+      setError("email", true); ok = false;
+    }
+    // Телефон необязательный, но если начали вводить — номер должен быть полным
+    var phoneDigits = fields.phone.value.replace(/\D/g, "");
+    if (phoneDigits.length > 0 && phoneDigits.length < 11) {
+      setError("phone", true); ok = false;
+    }
+    if (fields.message.value.trim().length < 8) {
+      setError("message", true); ok = false;
+    }
+    if (!fields.consent.checked) {
+      setError("consent", true); ok = false;
+    }
+
+    return ok;
+  }
+
+  function setLoading(loading) {
+    submitBtn.disabled = loading;
+    if (loading) {
+      submitBtn.innerHTML = '<span class="spinner" aria-hidden="true"></span> Отправляем…';
+    } else {
+      submitBtn.textContent = "Отправить заявку";
+    }
+  }
+
+  function hideError() {
+    errorBox.hidden = true;
+    formCard.classList.remove("is-error");
+  }
+
+  function showError(text) {
+    errorText.textContent = text;
+    errorBox.hidden = false;
+    formCard.classList.add("is-error");
+    errorBox.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function showSuccess(data) {
+    var time = new Date().toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" });
+
+    summary.innerHTML = "";
+    [
+      ["Имя", data.name],
+      ["E-mail", data.email],
+      ["Телефон", data.phone || "не указан"],
+      ["Проблема", data.message],
+      ["Время", "сегодня в " + time]
+    ].forEach(function (row) {
+      var line = document.createElement("div");
+      var dt = document.createElement("dt");
+      var dd = document.createElement("dd");
+      dt.textContent = row[0];
+      dd.textContent = row[1];
+      line.appendChild(dt);
+      line.appendChild(dd);
+      summary.appendChild(line);
+    });
+
+    document.getElementById("success-text").textContent =
+      "Спасибо, " + data.name.split(" ")[0] +
+      "! Заявка ушла мастеру — Сергей скоро вам позвонит, обычно в течение 15 минут.";
+
+    hideError();
+    form.hidden = true;
+    success.hidden = false;
+    success.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  // Отправка через fetch на Web3Forms: страница не перезагружается,
+  // а успех/ошибка показываются аккуратным блоком в том же месте.
+  async function submitRequest() {
+    var payload = new FormData(form);
+    payload.set("phone", fields.phone.value.trim());
+    payload.set("e_phone_label", "Телефон");
+    payload.set("botcheck", "");
+
+    var controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+    var timer = controller ? setTimeout(function () { controller.abort(); }, 20000) : null;
+
+    try {
+      var response = await fetch(form.action, {
+        method: "POST",
+        body: payload,
+        headers: { "Accept": "application/json" },
+        signal: controller ? controller.signal : undefined
+      });
+      var result = await response.json().catch(function () { return {}; });
+
+      if (response.ok && result.success) {
+        showSuccess({
+          name: fields.name.value.trim(),
+          email: fields.email.value.trim(),
+          phone: fields.phone.value.trim(),
+          message: fields.message.value.trim()
+        });
+        form.reset();
+        return;
+      }
+
+      // Сервис ответил, но отказ: показываем именно его причину
+      var reason = (result && result.message) || ("Сервис отклонил отправку (код " + response.status + ").");
+      showError("Сервис не принял заявку (" + response.status + "): " + reason);
+    } catch (err) {
+      if (err && err.name === "AbortError") {
+        showError("Сервер долго не отвечает. Проверьте интернет и попробуйте ещё раз.");
+      } else {
+        showError("Не получилось отправить заявку. Нажмите «Попробовать снова» — " +
+          "если не поможет, напишите мастеру на почту.");
+      }
+    } finally {
+      if (timer) clearTimeout(timer);
+      setLoading(false);
+    }
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    msg.textContent = "";
+    msg.classList.remove("error-text");
+    hideError();
+
+    if (!validate()) {
+      msg.textContent = "Проверьте, пожалуйста, выделенные поля.";
+      msg.classList.add("error-text");
+      var firstInvalid = form.querySelector('[aria-invalid="true"]');
+      if (firstInvalid) firstInvalid.focus();
+      return;
+    }
+
+    setLoading(true);
+    submitRequest();
+  });
+
+  retryBtn.addEventListener("click", function () {
+    hideError();
+    if (validate()) {
+      setLoading(true);
+      submitRequest();
+    } else {
+      var firstInvalid = form.querySelector('[aria-invalid="true"]');
+      if (firstInvalid) firstInvalid.focus();
+    }
+  });
+
+  resetBtn.addEventListener("click", function () {
+    form.reset();
+    summary.innerHTML = "";
+    msg.textContent = "";
+    Object.keys(fields).forEach(function (key) { setError(key, false); });
+    hideError();
+    success.hidden = true;
+    form.hidden = false;
+    fields.name.focus();
+  });
+})();
+</script>
